@@ -37,5 +37,7 @@ async function loadPlanetDataPeriods() {
 }
 
 const newEarthPeriods = await loadPlanetDataPeriods();
+const minPeriod = Math.min(...newEarthPeriods);
 const maxPeriod = Math.max(...newEarthPeriods);
+console.log(`${minPeriod} days was the shortest orbital period found!`);
 console.log(`${maxPeriod} days was the longest orbital period found!`);
